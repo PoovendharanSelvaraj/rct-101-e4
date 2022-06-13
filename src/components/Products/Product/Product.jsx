@@ -1,4 +1,7 @@
+import axios from "axios";
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import {
@@ -8,7 +11,9 @@ import {
 } from "../../../store/cart/cart.actions";
 
 const Product = () => {
+  const [data,setData]=useState([])
   const id = null;
+ 
   return (
     <div data-cy={`product-${id}`}>
       <h3 data-cy="product-name">name</h3>
